@@ -34,31 +34,32 @@ let initialState = {
 
 
 export const profileReducer = (state = initialState, action) => {
-    let stateCopy = {...state,
-    postData:[...state.postData]};
     switch (action.type) {
 
         case ADD_POST : {
-            if (stateCopy.newPostText != '') {
-                let newPost = {
-                    id: stateCopy.postData[stateCopy.postData.length - 1].id + 1,
-                    message: stateCopy.newPostText,
-                    likesCounter: 0,
-                    picture: 'https://klike.net/uploads/posts/2019-06/1560059165_1.jpg'
+            if (state.newPostText != '') {
+                return {
+                    ...state,
+                    postData: [...state.postData, {
+                        id: state.postData[state.postData.length - 1].id + 1,
+                        message: state.newPostText,
+                        likesCounter: 0,
+                        picture: 'https://klike.net/uploads/posts/2019-06/1560059165_1.jpg'
+                    }],
+                    newPostText: ''
                 }
-                stateCopy.postData.push(newPost);
-                stateCopy.newPostText = '';
-            }
-            return stateCopy;
+
+            } return state;
         }
         case UPDATE_NEW_POST_TEXT : {
-            stateCopy.newPostText = action.newText;
-            return stateCopy;
+            return {...state,
+                newPostText : action.newText
+            }
         }
         default:
-            return stateCopy;
+            return state;
     }
-    return stateCopy;
+    return state;
 }
 export const addPostActionCreator = () => ({type: ADD_POST})
 
