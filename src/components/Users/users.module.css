@@ -1,3 +1,13 @@
 .userPhoto {
     max-width: 10vw;
 }
+.selectedPage{
+    font-weight: 700;
+    color:cornflowerblue;
+}
+.pageCounter{
+    margin:10px;
+}
+.pageCounter:hover{
+    cursor: pointer;
+}
