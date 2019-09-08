@@ -11,7 +11,7 @@ export const SET_TOTAL_COUNT = 'SET_TOTAL_COUNT';
      users:[],
      pageSize:5,
      totalUsersCount:0,
-     currentPage:3
+     currentPage:1
  }
 //     users: [
 //         {
