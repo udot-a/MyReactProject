@@ -2,6 +2,8 @@ import {SEND_MESSAGE, UPDATE_NEW_MESSAGE_BODY} from "./dialogs-reducer";
 
 export const ADD_POST = 'ADD-POST';
 export const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+export const SET_USER_PROFILE = 'SET-USER-PROFILE';
+
 
 let initialState = {
     postData: [
@@ -29,7 +31,8 @@ let initialState = {
             likesCounter: 35,
             picture: 'https://klike.net/uploads/posts/2019-06/1560059165_1.jpg'
         }],
-    newPostText: 'IT kamasutra'
+    newPostText: 'IT kamasutra',
+    profile:null
 };
 
 
@@ -56,6 +59,11 @@ export const profileReducer = (state = initialState, action) => {
                 newPostText : action.newText
             }
         }
+        case SET_USER_PROFILE : {
+            return {...state,
+                profile : action.profile
+            }
+        }
         default:
             return state;
     }
@@ -64,5 +72,7 @@ export const profileReducer = (state = initialState, action) => {
 export const addPostActionCreator = () => ({type: ADD_POST})
 
 export const updateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text})
+
+export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
 
 

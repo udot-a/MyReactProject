@@ -1,34 +1,31 @@
 import React from 'react'
 import styles from "./users.module.css";
 import userPhoto from '../../assets/images/user.jpg'
+import {NavLink} from "react-router-dom";
 
 let Users = (props) => {
-    let pagesCount = Math.ceil(props.totalUsersCount/props.pageSize)
+    let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)
     let pages = []
-    for(let i=1; i<=pagesCount; i++) {
+    for (let i = 1; i <= pagesCount; i++) {
         pages.push(i)
     }
     return (
         <div>
             <div>
-                {pages.map(p=> {
-                    return  <span className={`${props.currentPage === p && styles.selectedPage} ${styles.pageCounter}`}
+                {pages.map(p => {
+                    return <span className={`${props.currentPage === p && styles.selectedPage} ${styles.pageCounter}`}
 
-                                  onClick={()=>props.onPageChanged(p)}>{p}</span>
+                                 onClick={() => props.onPageChanged(p)}>{p}</span>
                 })}
-                {/*<span>1</span>*/}
-                {/*<span className={styles.selectedPage}>2</span>*/}
-                {/*<span>3</span>*/}
-                {/*<span>4</span>*/}
-                {/*<span>5</span>*/}
             </div>
-            {/*<button onClick={getUsers}>Get Users</button>*/}
             {
                 props.users.map(u => <div key={u.id}>
                     <span>
                         <div>
+                            <NavLink to = {'/profile/'+u.id}>
                             <img className={styles.userPhoto}
                                  src={u.photos.small != null ? u.photos.small : userPhoto} alt="Аватарка"/>
+                            </NavLink>
 
                         </div>
                         <div>
