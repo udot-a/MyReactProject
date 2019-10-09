@@ -40,7 +40,7 @@ export const profileReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case ADD_POST : {
-            if (state.newPostText != '') {
+            if (state.newPostText !== '') {
                 return {
                     ...state,
                     postData: [...state.postData, {
