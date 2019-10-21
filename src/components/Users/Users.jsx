@@ -65,6 +65,7 @@ let Users = (props) => {
                                             }
                                             props.toggleFollowingProgress(false, u.id)
                                         });
+                                    
                                 }}>Follow</button>}
 
                         </div>
