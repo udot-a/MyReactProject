@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/MyReactProject/static/css/main.ce74dbde.chunk.css",
+    "main.js": "/MyReactProject/static/js/main.0cc1e8c2.chunk.js",
+    "runtime~main.js": "/MyReactProject/static/js/runtime~main.d85ecdb3.js",
+    "static/js/2.c54b357d.chunk.js": "/MyReactProject/static/js/2.c54b357d.chunk.js",
+    "index.html": "/MyReactProject/index.html",
+    "precache-manifest.874b79c6b1abefbf6aff55aee11cb47d.js": "/MyReactProject/precache-manifest.874b79c6b1abefbf6aff55aee11cb47d.js",
+    "service-worker.js": "/MyReactProject/service-worker.js",
+    "static/media/Pacman-1s-200px.svg": "/MyReactProject/static/media/Pacman-1s-200px.2096574f.svg",
+    "static/media/user.jpg": "/MyReactProject/static/media/user.4802d74b.jpg"
+  }
+}
