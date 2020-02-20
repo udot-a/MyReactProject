@@ -13,9 +13,8 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "predeploy": "yarn run build-production",
-    "deploy": "npx gh-pages -d build",
     "build-production": "npx cross-env GENERATE_SOURCEMAP=false react-scripts build",
+    "predeploy": "yarn run build-production",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -36,8 +35,8 @@
       "last 1 safari version"
     ]
   },
+  "homepage": "https://udot-a.github.io/MyReactProject/",
   "devDependencies": {
-    "gh-pages": "^2.1.1"
-  },
-  "homepage": "https://udot-a.github.io/MyReactProject/"
+    "prettier": "1.19.1"
+  }
 }
