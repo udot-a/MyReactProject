@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './ProfileInfo.module.css';
 import Preloader from "../../common/Preloader/Preloader";
+import ProfileStatus from './ProfileStatus'
 
 const ProfileInfo = (props) => {
     if (!props.profile){
@@ -8,14 +9,14 @@ const ProfileInfo = (props) => {
     }
   return (
     <div >
-      <div>
-        <img src='https://i.ytimg.com/vi/E0hnI4_egl8/maxresdefault.jpg' />
-      </div>
+      {/*<div>*/}
+      {/*  <img src='https://i.ytimg.com/vi/E0hnI4_egl8/maxresdefault.jpg' />*/}
+      {/*</div>*/}
       <div className={s.descriptionBlock}>
           <img src={props.profile.photos.large} alt="UserPhoto"/>
           <p>Меня зовут: {props.profile.fullName}</p>
           <p>В настоящий момент я {props.profile.lookingForAJob?'ищу работу !!!':'работаю по специальности.'}</p>
-
+          <ProfileStatus status='Hello world!!!'/>
         </div>
     </div>
   );
