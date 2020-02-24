@@ -1,9 +1,10 @@
 import {SEND_MESSAGE, UPDATE_NEW_MESSAGE_BODY} from "./dialogs-reducer";
-import {usersAPI} from "../api/api";
+import {profileAPI, usersAPI} from "../api/api";
 
 export const ADD_POST = 'ADD-POST';
 export const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 export const SET_USER_PROFILE = 'SET-USER-PROFILE';
+export const SET_STATUS = 'SET-STATUS';
 
 
 let initialState = {
@@ -33,7 +34,8 @@ let initialState = {
             picture: 'https://klike.net/uploads/posts/2019-06/1560059165_1.jpg'
         }],
     newPostText: 'IT kamasutra',
-    profile:null
+    profile:null,
+    status:''
 };
 
 
@@ -65,6 +67,11 @@ export const profileReducer = (state = initialState, action) => {
                 profile : action.profile
             }
         }
+        case SET_STATUS : {
+            return {...state,
+                status : action.status
+            }
+        }
         default:
             return state;
     }
@@ -75,12 +82,26 @@ export const addPostActionCreator = () => ({type: ADD_POST})
 export const updateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text})
 
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
+export const setStatus = (status) => ({type: SET_STATUS, status})
 export const getUserProfile = (userId) =>(dispatch)=> {
     usersAPI.getProfile(userId)
         .then(response => {
             dispatch(setUserProfile(response.data));
         });
-
+}
+export const getStatus = (userId) =>(dispatch)=> {
+    profileAPI.getStatus(userId)
+        .then(response => {
+            dispatch(setStatus(response.data));
+        });
+}
+export const updateStatus = (status) =>(dispatch)=> {
+    profileAPI.updateStatus(status)
+        .then(response => {
+            if (response.data.resultCode ===0){
+                dispatch(setStatus(status));
+            }
+        });
 }
 
 
