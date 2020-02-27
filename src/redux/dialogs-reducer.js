@@ -1,6 +1,5 @@
 import {ADD_POST, UPDATE_NEW_POST_TEXT} from "./profile-reducer";
 
-export const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE_BODY';
 export const SEND_MESSAGE = 'SEND_MESSAGE';
 
 let initialState = {
@@ -33,27 +32,19 @@ let initialState = {
         {id: 3, message: 'Where are you from?'},
         {id: 4, message: 'Life is piece of shirt!!!'},
         {id: 5, message: 'Remember me?'},
-        {id: 6, message: 'Just do it!!!'}],
-    newMessageBody: ''
+        {id: 6, message: 'Just do it!!!'}]
 };
 
 export const dialogsReducer = (state = initialState, action) => {
     switch (action.type) {
-        case UPDATE_NEW_MESSAGE_BODY : {
-            return {
-                ...state,
-                newMessageBody: action.body
-            }
-        }
         case SEND_MESSAGE : {
-            let body = state.newMessageBody
+            let body = action.newMessageBody
             return {
                 ...state,
                 messagesData: [...state.messagesData, {
                     id: state.messagesData[state.messagesData.length - 1].id + 1,
                     message: body
-                }],
-                newMessageBody: ''
+                }]
             }
         }
         default:
@@ -62,8 +53,7 @@ export const dialogsReducer = (state = initialState, action) => {
     return state;
 }
 
-export const sendMessageCreator = () => ({type: SEND_MESSAGE})
+export const sendMessageCreator = (newMessageBody) => ({type: SEND_MESSAGE, newMessageBody})
 
-export const updateNewMessageBodyCreator = (text) => ({type: UPDATE_NEW_MESSAGE_BODY, body: text})
 
 

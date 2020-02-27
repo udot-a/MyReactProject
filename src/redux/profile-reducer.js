@@ -2,7 +2,6 @@ import {SEND_MESSAGE, UPDATE_NEW_MESSAGE_BODY} from "./dialogs-reducer";
 import {profileAPI, usersAPI} from "../api/api";
 
 export const ADD_POST = 'ADD-POST';
-export const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
 export const SET_USER_PROFILE = 'SET-USER-PROFILE';
 export const SET_STATUS = 'SET-STATUS';
 
@@ -33,7 +32,6 @@ let initialState = {
             likesCounter: 35,
             picture: 'https://klike.net/uploads/posts/2019-06/1560059165_1.jpg'
         }],
-    newPostText: 'IT kamasutra',
     profile:null,
     status:''
 };
@@ -43,24 +41,15 @@ export const profileReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case ADD_POST : {
-            if (state.newPostText !== '') {
                 return {
                     ...state,
                     postData: [...state.postData, {
                         id: state.postData[state.postData.length - 1].id + 1,
-                        message: state.newPostText,
+                        message: action.newPostText,
                         likesCounter: 0,
                         picture: 'https://klike.net/uploads/posts/2019-06/1560059165_1.jpg'
-                    }],
-                    newPostText: ''
+                    }]
                 }
-
-            } return state;
-        }
-        case UPDATE_NEW_POST_TEXT : {
-            return {...state,
-                newPostText : action.newText
-            }
         }
         case SET_USER_PROFILE : {
             return {...state,
@@ -77,9 +66,8 @@ export const profileReducer = (state = initialState, action) => {
     }
     return state;
 }
-export const addPostActionCreator = () => ({type: ADD_POST})
+export const addPostActionCreator = (newPostText) => ({type: ADD_POST, newPostText})
 
-export const updateNewPostTextActionCreator = (text) => ({type: UPDATE_NEW_POST_TEXT, newText: text})
 
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
 export const setStatus = (status) => ({type: SET_STATUS, status})
