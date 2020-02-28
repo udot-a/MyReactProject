@@ -5,7 +5,11 @@ import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import {sendMessageCreator, updateNewMessageBodyCreator} from "../../redux/dialogs-reducer";
 import {Field, reduxForm} from "redux-form";
+import {Textarea} from "../common/FormControls/FormsControls";
+import {maxLengthCreator, minLengthCreator, required} from "../../utils/validators/validators";
 
+const maxLength30 = maxLengthCreator(30)
+const minLength10 = minLengthCreator(10)
 
 const Dialogs = (props) => {
     let state = props.messagePage;
@@ -41,7 +45,8 @@ const AddMessageForm = (props) => {
     return (
         <form onSubmit={props.handleSubmit}>
             <div>
-                <Field component='textarea' name='newMessageBody' placeholder='Enter your message...'/>
+                <Field component={Textarea} name='newMessageBody' placeholder='Enter your message...'
+                       validate={[required, maxLength30, minLength10]}/>
             </div>
             <div>
                 <button >Send</button>
