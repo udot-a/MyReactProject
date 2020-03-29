@@ -9,6 +9,7 @@ let Users = (props) => {
     for (let i = 1; i <= pagesCount; i++) {
         pages.push(i)
     }
+    console.log("CURRENT PAGE:", props.currentPage)
     return (
         <div>
             <div>
