@@ -9,13 +9,14 @@ export const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
 export const TOGGLE_IS_FOLLOWING_PROGRESS = 'TOGGLE_IS_FOLLOWING_PROGRESS';
 
 
+
 let initialState = {
     users: [],
     pageSize: 5,
     totalUsersCount: 0,
     currentPage: 1,
     isFetching: false,
-    followingInProgress: [1, 2, 3, 4]
+    followingInProgress: [1, 2, 3, 4],
 }
 export const usersReducer = (state = initialState, action) => {
     switch (action.type) {
@@ -94,7 +95,7 @@ export const unfollow = (userId) => {
         dispatch(toggleFollowingProgress(true, userId))
         usersAPI.unfollow(userId)
             .then(response => {
-                if (response.data.resultCode == 0) {
+                if (response.data.resultCode === 0) {
                     dispatch(unfollowSuccess(userId))
                 }
                 dispatch(toggleFollowingProgress(false, userId))
@@ -106,7 +107,7 @@ export const follow = ( userId) => {
         dispatch(toggleFollowingProgress(true, userId))
         usersAPI.follow(userId)
             .then(response => {
-                if (response.data.resultCode == 0) {
+                if (response.data.resultCode === 0) {
                     dispatch(followSuccess(userId))
                 }
                 dispatch(toggleFollowingProgress(false, userId))
