@@ -2,8 +2,10 @@ import {SEND_MESSAGE, UPDATE_NEW_MESSAGE_BODY} from "./dialogs-reducer";
 import {profileAPI, usersAPI} from "../api/api";
 
 export const ADD_POST = 'ADD-POST';
+export const DELETE_POST = 'DELETE_POST';
 export const SET_USER_PROFILE = 'SET-USER-PROFILE';
 export const SET_STATUS = 'SET-STATUS';
+
 
 
 let initialState = {
@@ -51,6 +53,12 @@ export const profileReducer = (state = initialState, action) => {
                     }]
                 }
         }
+        case DELETE_POST : {
+                return {
+                    ...state,
+                    postData: state.postData.filter(p => p.id != action.postId)
+                }
+        }
         case SET_USER_PROFILE : {
             return {...state,
                 profile : action.profile
@@ -67,6 +75,7 @@ export const profileReducer = (state = initialState, action) => {
     return state;
 }
 export const addPostActionCreator = (newPostText) => ({type: ADD_POST, newPostText})
+export const deletePost = (postId) => ({type: DELETE_POST, postId})
 
 
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile})
