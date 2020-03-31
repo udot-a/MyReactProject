@@ -11,26 +11,34 @@ import {Textarea} from "../../common/FormControls/FormsControls";
 
 const maxLength30 = maxLengthCreator(30)
 const minLength10 = minLengthCreator(10)
-const MyPosts = (props) => {
-    let count = 0
-    let postsElements =
-        props.posts.map(p => (<Post key = {count++} message={p.message} picture={p.picture} LikeCounter={p.likesCounter}/>));
 
-    let onAddPost = (values) => {
-        props.addPost(values.newPostText);
-        // props.dispatch(addPostActionCreator());
+class MyPosts extends React.Component {
+
+    shouldComponentUpdate(nextProps, nextState) {
+        return nextProps !=this.props || nextState !=this.state;
     }
+    render() {
+        let count = 0
+        let postsElements =
+            this.props.posts.map(p => (
+                <Post key={count++} message={p.message} picture={p.picture} LikeCounter={p.likesCounter}/>));
 
-    return (
-        <div className={s.postsBlock}>
-            <h3>My posts</h3>
-            <div className={s.posts}>
-                {postsElements}
-                <AddNewPostForm onSubmit={onAddPost}/>
+        let onAddPost = (values) => {
+            this.props.addPost(values.newPostText);
+        }
+
+        return (
+            <div className={s.postsBlock}>
+                <h3>My posts</h3>
+                <div className={s.posts}>
+                    {postsElements}
+                    <AddNewPostForm onSubmit={onAddPost}/>
+                </div>
             </div>
-        </div>
-    );
-};
+        );
+    }
+}
+
 let AddNewPostForm =(props)=>{
     return (
         <form onSubmit={props.handleSubmit}>
