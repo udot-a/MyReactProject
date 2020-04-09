@@ -1,9 +1,7 @@
 import React from 'react'
 import s from './Dialogs.module.css'
-import {NavLink, Redirect} from "react-router-dom";
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import {sendMessageCreator, updateNewMessageBodyCreator} from "../../redux/dialogs-reducer";
 import {Field, reduxForm} from "redux-form";
 import {Textarea} from "../common/FormControls/FormsControls";
 import {maxLengthCreator, minLengthCreator, required} from "../../utils/validators/validators";
@@ -24,9 +22,9 @@ const Dialogs = (props) => {
     let newMessageBody = state.newMessageBody;
 
     const addNewMessage=(values)=>{
-        props.sendMessage(values.newMessageBody)
+        props.sendMessage(values.newMessageBody);
+        values.newMessageBody = '';
     }
-    // if (!props.isAuth) return <Redirect to={'/login'}/>
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>

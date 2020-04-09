@@ -17,6 +17,7 @@ const MyPosts = React.memo(props => {
 
     let onAddPost = (values) => {
         props.addPost(values.newPostText);
+        values.newPostText = '';
     }
 console.log('RENDER YO')
     return (
