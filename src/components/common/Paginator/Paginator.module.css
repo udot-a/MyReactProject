@@ -1,10 +1,16 @@
-.selectedPage{
-    font-weight: 700;
-    color:cornflowerblue;
+.paginator {
+    margin: 10px;
 }
-.pageCounter{
-    margin:10px;
+.pageNumber {
+    padding: 2px;
+    border: 1px solid grey;
 }
-.pageCounter:hover{
+
+.pageNumber.selectedPage {
+    font-weight: bold;
+    border-color: black;
+}
+
+.pageNumber:hover{
     cursor: pointer;
 }
