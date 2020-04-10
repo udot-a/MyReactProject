@@ -1,13 +1,32 @@
 {
   "files": {
-    "main.css": "/MyReactProject/static/css/main.ce74dbde.chunk.css",
-    "main.js": "/MyReactProject/static/js/main.e5987bf4.chunk.js",
-    "runtime~main.js": "/MyReactProject/static/js/runtime~main.d85ecdb3.js",
-    "static/js/2.e502947c.chunk.js": "/MyReactProject/static/js/2.e502947c.chunk.js",
+    "main.css": "/MyReactProject/static/css/main.406c7e35.chunk.css",
+    "main.js": "/MyReactProject/static/js/main.c99222ca.chunk.js",
+    "main.js.map": "/MyReactProject/static/js/main.c99222ca.chunk.js.map",
+    "runtime-main.js": "/MyReactProject/static/js/runtime-main.2ad9532b.js",
+    "runtime-main.js.map": "/MyReactProject/static/js/runtime-main.2ad9532b.js.map",
+    "static/js/2.6d6e6b4d.chunk.js": "/MyReactProject/static/js/2.6d6e6b4d.chunk.js",
+    "static/js/2.6d6e6b4d.chunk.js.map": "/MyReactProject/static/js/2.6d6e6b4d.chunk.js.map",
+    "static/css/3.a2cf68d4.chunk.css": "/MyReactProject/static/css/3.a2cf68d4.chunk.css",
+    "static/js/3.07216689.chunk.js": "/MyReactProject/static/js/3.07216689.chunk.js",
+    "static/js/3.07216689.chunk.js.map": "/MyReactProject/static/js/3.07216689.chunk.js.map",
+    "static/css/4.cf5779db.chunk.css": "/MyReactProject/static/css/4.cf5779db.chunk.css",
+    "static/js/4.6627c31d.chunk.js": "/MyReactProject/static/js/4.6627c31d.chunk.js",
+    "static/js/4.6627c31d.chunk.js.map": "/MyReactProject/static/js/4.6627c31d.chunk.js.map",
     "index.html": "/MyReactProject/index.html",
-    "precache-manifest.680916eae337adabf3bc5f13e6a1e057.js": "/MyReactProject/precache-manifest.680916eae337adabf3bc5f13e6a1e057.js",
+    "precache-manifest.df2604554f5fed9f86f0bf46e385ba4d.js": "/MyReactProject/precache-manifest.df2604554f5fed9f86f0bf46e385ba4d.js",
     "service-worker.js": "/MyReactProject/service-worker.js",
+    "static/css/3.a2cf68d4.chunk.css.map": "/MyReactProject/static/css/3.a2cf68d4.chunk.css.map",
+    "static/css/4.cf5779db.chunk.css.map": "/MyReactProject/static/css/4.cf5779db.chunk.css.map",
+    "static/css/main.406c7e35.chunk.css.map": "/MyReactProject/static/css/main.406c7e35.chunk.css.map",
+    "static/js/2.6d6e6b4d.chunk.js.LICENSE.txt": "/MyReactProject/static/js/2.6d6e6b4d.chunk.js.LICENSE.txt",
     "static/media/Pacman-1s-200px.svg": "/MyReactProject/static/media/Pacman-1s-200px.2096574f.svg",
     "static/media/user.jpg": "/MyReactProject/static/media/user.4802d74b.jpg"
-  }
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2ad9532b.js",
+    "static/js/2.6d6e6b4d.chunk.js",
+    "static/css/main.406c7e35.chunk.css",
+    "static/js/main.c99222ca.chunk.js"
+  ]
 }
