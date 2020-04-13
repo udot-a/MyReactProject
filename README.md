@@ -9,6 +9,7 @@
 to  run clone application 
 run ```nmp install```
 and than run ```npm start```
-![Иллюстрация к проекту](https://github.com/udot-a/material-react/raw/master/src/assets/images/FirstScreen.png)
-![Иллюстрация к проекту](https://github.com/udot-a/material-react/raw/master/src/assets/images/SecondScreen.png)
-![Иллюстрация к проекту](https://github.com/udot-a/material-react/raw/master/src/assets/images/ThirdScreen.png)
+
+![Иллюстрация к проекту](https://github.com/udot-a/MyReactProject/raw/master/src/assets/images/FirstScreen.png)
+![Иллюстрация к проекту](https://github.com/udot-a/MyReactProject/raw/master/src/assets/images/SecondScreen.png)
+![Иллюстрация к проекту](https://github.com/udot-a/MyReactProject/raw/master/src/assets/images/ThirdScreen.png)
