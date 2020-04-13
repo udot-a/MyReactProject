@@ -24,10 +24,13 @@ class ProfileStatus extends React.PureComponent {
     render() {
         return (
             <div>
-
+                {"Status(click to change): "}
                 {!this.state.editMode &&
                 <div>
-                    <span onDoubleClick={this.activateEditMode}>{this.props.status||'---no status---'}</span>
+                    <span
+                        onDoubleClick={this.activateEditMode}>{this.props.status||'---no status---'}
+                        className={s.status}
+                    </span>
                 </div>
                 }
                 {this.state.editMode &&

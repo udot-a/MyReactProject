@@ -2,3 +2,9 @@
 .descriptionBlock{
   padding: 10px;
 }
+
+.status{
+  font-style: italic;
+  color: cornflowerblue;
+  font-weight: bold;
+}
