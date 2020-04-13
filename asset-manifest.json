@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/MyReactProject/static/css/main.406c7e35.chunk.css",
-    "main.js": "/MyReactProject/static/js/main.c99222ca.chunk.js",
-    "main.js.map": "/MyReactProject/static/js/main.c99222ca.chunk.js.map",
+    "main.js": "/MyReactProject/static/js/main.62af1680.chunk.js",
+    "main.js.map": "/MyReactProject/static/js/main.62af1680.chunk.js.map",
     "runtime-main.js": "/MyReactProject/static/js/runtime-main.7a6e7dc2.js",
     "runtime-main.js.map": "/MyReactProject/static/js/runtime-main.7a6e7dc2.js.map",
     "static/js/2.6d6e6b4d.chunk.js": "/MyReactProject/static/js/2.6d6e6b4d.chunk.js",
@@ -14,7 +14,7 @@
     "static/js/4.6627c31d.chunk.js": "/MyReactProject/static/js/4.6627c31d.chunk.js",
     "static/js/4.6627c31d.chunk.js.map": "/MyReactProject/static/js/4.6627c31d.chunk.js.map",
     "index.html": "/MyReactProject/index.html",
-    "precache-manifest.b210ef6cccd0d7d5c5fd56e396910ff4.js": "/MyReactProject/precache-manifest.b210ef6cccd0d7d5c5fd56e396910ff4.js",
+    "precache-manifest.e71418b45864039ec9f743e45f0294fe.js": "/MyReactProject/precache-manifest.e71418b45864039ec9f743e45f0294fe.js",
     "service-worker.js": "/MyReactProject/service-worker.js",
     "static/css/3.4d5ac39f.chunk.css.map": "/MyReactProject/static/css/3.4d5ac39f.chunk.css.map",
     "static/css/4.cf5779db.chunk.css.map": "/MyReactProject/static/css/4.cf5779db.chunk.css.map",
@@ -27,6 +27,6 @@
     "static/js/runtime-main.7a6e7dc2.js",
     "static/js/2.6d6e6b4d.chunk.js",
     "static/css/main.406c7e35.chunk.css",
-    "static/js/main.c99222ca.chunk.js"
+    "static/js/main.62af1680.chunk.js"
   ]
 }
