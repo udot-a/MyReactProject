@@ -10,6 +10,12 @@ to  run clone application
 run ```nmp install```
 and than run ```npm start```
 
+For working with application use test account:
+<br>
+
+    Email: free@samuraijs.com
+    Password: free
+
 ![Иллюстрация к проекту](https://github.com/udot-a/MyReactProject/raw/master/src/assets/images/FirstScreen.png)
 ![Иллюстрация к проекту](https://github.com/udot-a/MyReactProject/raw/master/src/assets/images/SecondScreen.png)
 ![Иллюстрация к проекту](https://github.com/udot-a/MyReactProject/raw/master/src/assets/images/ThirdScreen.png)
