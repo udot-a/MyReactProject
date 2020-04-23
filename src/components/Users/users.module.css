@@ -1,5 +1,6 @@
 .userPhoto {
-    max-width: 10vw;
+    max-width: 6vw;
+    border-radius: 3vw;
 }
 .selectedPage{
     font-weight: 700;
