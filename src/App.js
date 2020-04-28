@@ -1,11 +1,9 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import {BrowserRouter, Route} from "react-router-dom";
+import {BrowserRouter, HashRouter, Route} from "react-router-dom";
 import News from "./components/News/News";
-// import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import UsersContainer from "./components/Users/UsersContainer";
-// import ProfileContainer from "./components/Profile/ProfileContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
 import Login from "./login/login";
 import {connect, Provider} from "react-redux";
@@ -62,11 +60,11 @@ let AppContainer =  compose (
 
 const SamuraiJSApp = (props) => {
     return (
-        <BrowserRouter>
+        <HashRouter >
             <Provider store={store}>
                 <AppContainer />
             </Provider>
-        </BrowserRouter>
+        </HashRouter>
 
     )
 };
