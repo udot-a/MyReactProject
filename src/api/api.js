@@ -6,7 +6,7 @@ const instance = axios.create({
     headers: {
         "API-KEY": "15c6ed1d-eb09-4e34-b317-716c6eb705bc"
     }
-})
+});
 
 export const usersAPI = {
     getUsers(currentPage = 1, pageSize = 10) {
@@ -65,4 +65,3 @@ export const securityAPI = {
         return instance.get("security/get-captcha-url");
     }
 }
-

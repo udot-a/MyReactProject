@@ -15,7 +15,7 @@ For working with application use test account:
 
     Email: free@samuraijs.com
     Password: free
-
+[example application](https://udot-a.github.io/MyReactProject/)
 ![Иллюстрация к проекту](https://github.com/udot-a/MyReactProject/raw/master/src/assets/images/FirstScreen.png)
 ![Иллюстрация к проекту](https://github.com/udot-a/MyReactProject/raw/master/src/assets/images/SecondScreen.png)
 ![Иллюстрация к проекту](https://github.com/udot-a/MyReactProject/raw/master/src/assets/images/ThirdScreen.png)
