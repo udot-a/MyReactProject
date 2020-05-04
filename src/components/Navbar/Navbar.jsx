@@ -1,6 +1,5 @@
 import React from 'react';
 import s from './Navbar.module.css';
-import {isClassExpression} from '@babel/types';
 import {NavLink} from "react-router-dom";
 
 const Navbar = () => {

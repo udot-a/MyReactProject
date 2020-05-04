@@ -97,3 +97,4 @@ const Contact = ({contactTitle, contactValue}) => {
     );
 }
 export default ProfileInfo;
+

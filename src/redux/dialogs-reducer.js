@@ -1,4 +1,3 @@
-import {ADD_POST, UPDATE_NEW_POST_TEXT} from "./profile-reducer";
 
 export const SEND_MESSAGE = 'SEND_MESSAGE';
 
@@ -52,7 +51,6 @@ export const dialogsReducer = (state = initialState, action) => {
     }
     return state;
 }
-
 export const sendMessageCreator = (newMessageBody) => ({type: SEND_MESSAGE, newMessageBody})
 
 

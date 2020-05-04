@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import {BrowserRouter, HashRouter, Redirect, Route, Switch} from "react-router-dom";
+import {HashRouter, Redirect, Route, Switch} from "react-router-dom";
 import News from "./components/News/News";
 import UsersContainer from "./components/Users/UsersContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
@@ -20,8 +20,7 @@ const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileCo
 
 class App extends React.Component {
     catchAllUnhandledError = (promiseRejectionEvent) =>{
-        alert("Some error occured!!!")
-        console.error(promiseRejectionEvent);
+        console.error("DronError:", promiseRejectionEvent);
     }
 
     componentDidMount() {

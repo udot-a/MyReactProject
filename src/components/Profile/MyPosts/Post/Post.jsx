@@ -3,7 +3,7 @@ import s from './Post.module.css';
 const Post = (props) => {
   return (
     <div className={s.item}>
-      <img src={props.picture} />
+      <img src={props.picture} alt={"Post"}/>
       {props.message}
       <div>
         <span>{props.LikeCounter} Like</span>

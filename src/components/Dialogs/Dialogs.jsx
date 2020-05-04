@@ -19,8 +19,6 @@ const Dialogs = (props) => {
     let messagesElements =
         state.messagesData.map(el => (<Message message={el.message} key={el.id}/>));
 
-    let newMessageBody = state.newMessageBody;
-
     const addNewMessage=(values)=>{
         props.sendMessage(values.newMessageBody);
         values.newMessageBody = '';
@@ -55,3 +53,4 @@ const AddMessageForm = (props) => {
 }
 const AddMessageFormRedux = reduxForm({form:'dialogAddMessageForm'})(AddMessageForm)
 export default Dialogs;
+

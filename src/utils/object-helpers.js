@@ -17,7 +17,7 @@ export const parseStr = (str) => {
             continue;
         }
 
-        if (flag && str[i]!=")") result+=str[i];
+        if (flag && str[i]!==")") result+=str[i];
     }
 
     return result.toLowerCase();
